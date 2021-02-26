@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,7 +44,7 @@ public class SampleClient {
 		long estimatedTime = System.nanoTime() - startTime;
 		System.out.println("  Time taken to get response" + estimatedTime);
 		System.out.println(sb);		
-		//patientsresparray.stream().sorted((o1,o2)->o1.getNameFirstRep().getFamily().compareTo(o2.getNameFirstRep().getFamily())).forEach(s->System.out.println("  last name  "+s.getNameFirstRep().getFamily()+" first name "+s.getNameFirstRep().getGiven()+ "   Birth Date   " + s.getBirthDate()));
+		patientsresparray.stream().sorted((o1,o2)->o1.getNameFirstRep().getFamily().compareTo(o2.getNameFirstRep().getFamily())).forEach(s->System.out.println("  last name  "+s.getNameFirstRep().getFamily()+" first name "+s.getNameFirstRep().getGiven()+ "   Birth Date   " + s.getBirthDate()));
 
 
 	}
